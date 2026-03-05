@@ -286,7 +286,7 @@ bulk_email_sender/
 ├── pytest.ini              # Pytest configuration
 └── README.md              # This file
 ```
-## Developmen
+
 ## Requirements
 
 - Python 3.10+
@@ -313,4 +313,5 @@ TBD
 ## Support
 
 For issues, questions, or feature requests, please open an issue on the project repository.
+
 
