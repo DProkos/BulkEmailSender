@@ -402,8 +402,7 @@ class TemplateTab(QWidget):
     def update_variable_combos(self):
         """Update all variable combo boxes with available fields."""
         # Clear existing items (except the first "Insert Variable..." item)
-        for combo in [self.subject_var_combo, self.html_var_combo, 
-                      self.text_var_combo, self.unsubscribe_column_combo]:
+        for combo in [self.subject_var_combo, self.unsubscribe_column_combo]:
             # Store the first item
             first_item_text = combo.itemText(0)
             first_item_data = combo.itemData(0)
@@ -590,7 +589,7 @@ class TemplateTab(QWidget):
                 subject=self.subject_input.text(),
                 html_body=self.html_body_content,
                 text_body=self.text_body_content,
-                unsubscribe_link=self.unsubscribe_input.text(),
+                unsubscribe_link=self.unsubscribe_url_input.text(),
                 attachments=self.attachments.copy()
             )
             self.config_manager.save_config()
@@ -623,7 +622,7 @@ class TemplateTab(QWidget):
                 
                 # Load unsubscribe link
                 if template_config.get('unsubscribe_link'):
-                    self.unsubscribe_input.setText(template_config['unsubscribe_link'])
+                    self.unsubscribe_url_input.setText(template_config['unsubscribe_link'])
                 
                 # Load attachments (only if files still exist)
                 saved_attachments = template_config.get('attachments', [])
