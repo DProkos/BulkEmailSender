@@ -286,33 +286,7 @@ bulk_email_sender/
 ├── pytest.ini              # Pytest configuration
 └── README.md              # This file
 ```
-
-## Development
-
-### Running Tests
-
-```bash
-# Run all tests
-pytest
-
-# Run specific test categories
-pytest tests/test_smtp_manager.py      # SMTP tests
-pytest tests/test_excel_importer.py    # Excel import tests
-pytest tests/test_template_renderer.py # Template tests
-pytest tests/test_worker.py            # Worker thread tests
-pytest tests/test_performance.py       # Performance tests
-
-# Run with coverage
-pytest --cov=. --cov-report=html
-```
-
-### Test Categories
-- **Unit Tests**: Test individual components
-- **Integration Tests**: Test component interactions
-- **Property-Based Tests**: Test with generated inputs (Hypothesis)
-- **Performance Tests**: Test with large datasets (10,000+ recipients)
-- **Error Scenario Tests**: Test error handling and recovery
-
+## Developmen
 ## Requirements
 
 - Python 3.10+
@@ -339,3 +313,4 @@ TBD
 ## Support
 
 For issues, questions, or feature requests, please open an issue on the project repository.
+
